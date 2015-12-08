@@ -1,0 +1,198 @@
+$main-font: 'Roboto', sans-serif;
+$title-font: 'Open Sans', sans-serif;
+$main-color: #88878A;
+$secondary-color: #2F2F2F;
+
+$break-small: 500px;
+$break-large: 992px;
+
+html {
+  font-size: 36px;
+
+  @media screen and (max-width: $break-large) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    font-size: 26px;
+  }
+}
+
+.social-media{
+  a {
+    color: $secondary-color;
+  }
+
+  i {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border: 2px solid $secondary-color;
+    border-radius: 45px;
+    font-size: .666666667rem;
+  }
+}
+
+body {
+  color: $secondary-color;
+  font-weight: 100;
+  line-height: 1.5;
+  font-family: $main-font;
+}
+
+ul, p {
+  font-size: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  ul {
+    padding: 0 1em 1em 1em;
+    font-size: 0.5rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  line-height: 1.1;
+  color: $secondary-color;
+}
+
+h1 {
+  font-family: $title-font;
+  font-weight: 700;
+  border: 1px solid $secondary-color;
+  display: inline-block;
+  padding: .5em 2em;
+  margin: .5em 0;
+  text-transform: uppercase;
+  font-size: 1.333333333rem;
+}
+
+.profession {
+  text-transform: uppercase;
+  font-family: $title-font;
+  font-size: .777777778rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-family: $title-font;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: .666666667rem;
+  font-family: $title-font;
+  font-weight: 700;
+  margin-top: .75rem;
+}
+
+h4 {
+  font-size: .5rem;
+  font-family: $title-font;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+
+  em {
+    color: $main-color;
+    text-transform: none;
+    display: block;
+    margin-top: .25em;
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nav-pills {
+  display: inline-block;
+}
+
+.experience {
+  text-align: right;
+  border-right: 1px solid $secondary-color;
+
+  @media screen and (max-width: $break-large) {
+    text-align: left;
+    border-right: none;
+  }
+}
+
+.experience,
+.skills {
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @media screen and (max-width: $break-large) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.profile {
+  max-height: 216px;
+
+  @media screen and (max-width: $break-small) {
+    max-height: 108px;
+  }
+}
+
+footer {
+  border-top: 1px solid $secondary-color;
+  padding: .5rem 0;
+  text-align: center;
+
+  @media screen and (max-width: $break-large) {
+    text-align: left;
+  }
+
+  h4 {
+    margin-bottom: .5rem;
+  }
+
+  em {
+    font-weight: 700;
+  }
+}
+
+.portfolio-items {
+  border-top: 1px solid #2F2F2F;
+  margin-top: 2rem;
+  padding: 1rem 0px .5rem;
+}
+
+.portfolio-item {
+  margin-bottom: .5rem;
+
+  h3 {
+    color: white;
+    padding: 1em;
+    margin: 0;
+    font-weight: 300;
+    font-size: .444444444rem;
+    text-transform: uppercase;
+  }
+
+  div {
+    background: $secondary-color;
+  }
+
+  &:hover img {
+    -webkit-filer: grayscale(50%);
+    filter: grayscale(50%);
+  }
+
+  img {
+    -webkit-filer: grayscale(100%);
+    filter: grayscale(100%);
+  }
+}
