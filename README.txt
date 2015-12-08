@@ -1,3 +1,1 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/MarkusToe/pen/zrxrmL.
-
- 
+A personal website presenting my CV and some projects I have been working on.
