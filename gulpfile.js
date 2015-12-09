@@ -3,10 +3,14 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var recess = require('gulp-recess');
 var csslint = require('gulp-csslint');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 var input = './stylesheets/*.scss';
 var output = './public/css';
 var cssInput = './public/css/*.css';
+var imgInput = './public/img/*';
+var imgOutput = './public/img';
 
 var sassOptions = {
   errLogToConsole: true,
@@ -19,6 +23,17 @@ gulp.task('sass', function () {
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(output));
+});
+
+gulp.task('imageopt', function () {
+  return gulp
+    .src(imgInput)
+    .pipe(imagemin({
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		}))
+		.pipe(gulp.dest(imgInput));
 });
 
 gulp.task('style-quality', function () {
