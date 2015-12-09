@@ -84,8 +84,12 @@ h4 {
 }
 
 header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: center;
+
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 1rem;
+  }
 }
 
 .profession {
@@ -119,14 +123,13 @@ header {
 }
 
 .personal-profile {
-  margin-bottom: 2rem;
-
-  div:first-child {
-    border-bottom: 1px solid $secondary-color;
-    padding-bottom:1rem;
-  }
+  margin-bottom: 3rem;
 
   p { margin-bottom: 1em; }
+
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 1rem;
+  }
 }
 
 .experience {
@@ -167,9 +170,11 @@ header {
 }
 
 .portfolio-items {
-  border-top: 1px solid $secondary-color;
-  margin-top: 2rem;
-  padding: 1rem 0 .5rem;
+  margin-bottom: 3rem;
+
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 1rem;
+  }
 }
 
 .portfolio-item {
@@ -199,11 +204,17 @@ header {
 
 footer {
   border-top: 1px solid $secondary-color;
-  padding: .5rem 0;
+  margin-top: 3rem;
+
+  padding: 1rem 0;
   text-align: center;
 
   @media screen and (max-width: $break-large) {
     text-align: left;
+  }
+
+  @media screen and (max-width: $break-small) {
+    margin-top: 1rem;
   }
 
   h4 { margin-bottom: .5rem; }
